@@ -18,8 +18,18 @@
 7> 同步远程master分支与本地分支一致(不会合并分支)
    git rebase origin/master
 
-8>  删除分支
+8> 代码提交总体流程:
+   S1: 创建分支: git checkout -b xxx
+   S2: 修改/添加代码;
+   S3: 获取服务器最新代码: git fetch origin
+   S4: 切换到要合并的分支: git checkout xxx
+   S5: 远程服务器与本地代码同步: git rebase origin/master  本地与master同步
+   S6: 合并分支:
+   	   在被合并分支上查看commitid: git log
+       合并:git cherry-pick commitid
+
+9>  删除分支
     git branch -d 分支名称
 
-9>  push命令推送修改至review服务器
+10>  push命令推送修改至review服务器
     git push origin HEAD:refs/for/master
