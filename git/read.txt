@@ -29,7 +29,8 @@
        合并:git cherry-pick commitid
 
 9>  删除分支
-    git branch -d 分支名称
+    git branch -d 分支名称   本地分支删除
+    git push origin --delete 分支名称  远程分支删除
 
 10>  push命令推送修改至review服务器
     git push origin HEAD:refs/for/master
