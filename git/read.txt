@@ -1,0 +1,25 @@
+1> 查看图形化log指令: gitk
+2> 本地创建分支: git checkout -b fixbug_001
+3> 分支上提交代码: 用小乌龟提交后
+    git push -u origin master
+
+    origin:远程机器名;
+    master:分支名称;
+
+4> 获取服务器上更新
+    git fetch origin
+
+5> 切换分支
+    git checkout master
+
+6> 查看当前分支
+   git branch
+
+7> 同步远程master分支与本地分支一致(不会合并分支)
+   git rebase origin/master
+
+8>  删除分支
+    git branch -d 分支名称
+
+9>  push命令推送修改至review服务器
+    git push origin HEAD:refs/for/master
